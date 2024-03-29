@@ -33,7 +33,7 @@ const App = () => {
 	const handleEditNote = (id, updatedTitle, updatedContent) => {
 		// Update note by ID
 		axios
-			.put(`http://localhost:5000/api/notes/${id}`, {
+			.put(`https://miniproject-1-mvsh.onrender.com/api/notes/${id}`, {
 				title: updatedTitle,
 				content: updatedContent,
 			})
@@ -49,7 +49,7 @@ const App = () => {
 	const handleDeleteNote = (id) => {
 		// Delete note by ID
 		axios
-			.delete(`http://localhost:5000/api/notes/${id}`)
+			.delete(`https://miniproject-1-mvsh.onrender.com/api/notes/${id}`)
 			.then((response) => {
 				const updatedNotes = notes.filter((note) => note._id !== id);
 				setNotes(updatedNotes);
