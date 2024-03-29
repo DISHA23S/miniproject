@@ -14,7 +14,7 @@ const App = () => {
 	useEffect(() => {
 		// Fetch notes from the server
 		axios
-			.get("http://localhost:5000/api/notes")
+			.get("https://miniproject-1-mvsh.onrender.com/api/notes")
 			.then((response) => setNotes(response.data))
 			.catch((error) => console.error("Error fetching notes:", error));
 	}, []);
@@ -22,7 +22,7 @@ const App = () => {
 	const handleAddNote = () => {
 		// Add a new note to the server
 		axios
-			.post("http://localhost:5000/api/notes", { title, content })
+			.post("https://miniproject-1-mvsh.onrender.com/api/notes", { title, content })
 			.then((response) => {
 				setNotes([...notes, response.data]);
 				setTitle("");
